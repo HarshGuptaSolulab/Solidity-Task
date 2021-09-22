@@ -54,7 +54,7 @@ contract Trim{
     }
      
     
-    function removeChar(bytes memory str, uint index) public pure returns (bytes memory) {
+    function removeChar(bytes memory str, uint index) internal pure returns (bytes memory) {
         bytes memory strBytes = bytes(str);
         bytes memory first=new bytes(index-1);
         bytes memory second=new bytes(strBytes.length-index);
